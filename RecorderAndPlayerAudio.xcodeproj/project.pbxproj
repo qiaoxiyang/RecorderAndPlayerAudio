@@ -24,6 +24,7 @@
 		AA6BE6861E603E43001C280E /* XYRecorderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA6BE67B1E603E43001C280E /* XYRecorderManager.m */; };
 		AA6BE6871E603E43001C280E /* XYRecordPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA6BE67D1E603E43001C280E /* XYRecordPlayerManager.m */; };
 		AA6BE6881E603E43001C280E /* XYSpectrumView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA6BE67F1E603E43001C280E /* XYSpectrumView.m */; };
+		AABEC7DA1E63CCE50087A45E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AABEC7D91E63CCE50087A45E /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		AA6BE67D1E603E43001C280E /* XYRecordPlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRecordPlayerManager.m; sourceTree = "<group>"; };
 		AA6BE67E1E603E43001C280E /* XYSpectrumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSpectrumView.h; sourceTree = "<group>"; };
 		AA6BE67F1E603E43001C280E /* XYSpectrumView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSpectrumView.m; sourceTree = "<group>"; };
+		AABEC7D91E63CCE50087A45E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +245,7 @@
 				AA6BE6791E603E43001C280E /* XYPlayVioceButton.m */,
 				AA6BE67E1E603E43001C280E /* XYSpectrumView.h */,
 				AA6BE67F1E603E43001C280E /* XYSpectrumView.m */,
+				AABEC7D91E63CCE50087A45E /* Settings.bundle */,
 			);
 			name = CustomView;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AABEC7DA1E63CCE50087A45E /* Settings.bundle in Resources */,
 				AA6BE6441E603E0A001C280E /* LaunchScreen.storyboard in Resources */,
 				AA6BE6411E603E0A001C280E /* Assets.xcassets in Resources */,
 				AA6BE63F1E603E0A001C280E /* Main.storyboard in Resources */,

@@ -12,7 +12,7 @@
 #import "XYRecordPlayerManager.h"
 
 static CGFloat titleFont = 14;
-
+#define XYImageSrcName(file)               [[UIImage imageNamed:[@"Settings.bundle/playerIcon" stringByAppendingPathComponent:file]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
 @interface XYPlayVioceButton ()<XYRecordPlayerDelegate>
 
 @property(nonatomic, retain) XYRecordPlayerManager *playerManager;
@@ -54,7 +54,8 @@ static CGFloat titleFont = 14;
 }
 
 -(CGRect)imageRectForContentRect:(CGRect)contentRect{
-    UIImage *img3 = [UIImage imageNamed:@"icon_wave_2"];
+    
+    UIImage *img3 = XYImageSrcName(@"icon_wave_2");
     CGFloat h = img3.size.height;
     CGFloat x = [self imageX:contentRect];
     CGFloat y = (contentRect.size.height-h)/2.0;
@@ -66,7 +67,7 @@ static CGFloat titleFont = 14;
 
 -(CGRect)titleRectForContentRect:(CGRect)contentRect{
     
-    UIImage *img3 = [UIImage imageNamed:@"icon_wave_2"];
+    UIImage *img3 = XYImageSrcName(@"icon_wave_2");
     CGSize size = [self.currentTitle boundingRectWithSize:contentRect.size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{
                                                                                                                                       NSFontAttributeName:[UIFont systemFontOfSize:titleFont]
                                                                                                                                       }context:nil].size;
@@ -84,7 +85,7 @@ static CGFloat titleFont = 14;
     CGSize titleSize = [self.currentTitle boundingRectWithSize:contentRect.size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{
                                                                                                         NSFontAttributeName:[UIFont systemFontOfSize:titleFont]
                                                                                                                                           } context:nil].size;
-    UIImage *img3 = [UIImage imageNamed:@"icon_wave_2"];
+    UIImage *img3 = XYImageSrcName(@"icon_wave_2");
     CGSize imgSize = img3.size;
     CGFloat contentW = titleSize.width+imgSize.width;
     CGFloat x = 0;
@@ -99,17 +100,17 @@ static CGFloat titleFont = 14;
     
     self.playerManager = [XYRecordPlayerManager sharedRecordPlayerManager];
     self.playerManager.delegate = self;
-    [self setBackgroundImage:[UIImage imageNamed:@"chat_bubble"] forState:UIControlStateNormal];
+    [self setBackgroundImage:XYImageSrcName(@"chat_bubble") forState:UIControlStateNormal];
     
-    [self setImage:[UIImage imageNamed:@"icon_wave_2"] forState:UIControlStateNormal];
+    [self setImage:XYImageSrcName(@"icon_wave_2") forState:UIControlStateNormal];
     
     [self addTarget:self action:@selector(play) forControlEvents:UIControlEventTouchUpInside];
     self.contentMode = UIViewContentModeCenter;
     self.titleLabel.font = [UIFont systemFontOfSize:titleFont];
     
-    UIImage *img1 = [UIImage imageNamed:@"icon_wave_0"];
-    UIImage *img2 = [UIImage imageNamed:@"icon_wave_1"];
-    UIImage *img3 = [UIImage imageNamed:@"icon_wave_2"];
+    UIImage *img1 = XYImageSrcName(@"icon_wave_0");
+    UIImage *img2 = XYImageSrcName(@"icon_wave_1");
+    UIImage *img3 = XYImageSrcName(@"icon_wave_2");
     self.imageArr = @[img1,img2,img3];
     
 }
